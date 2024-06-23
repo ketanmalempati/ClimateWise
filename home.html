@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Carbon Impact Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <aside class="sidebar">
+            <h1>Climate Wise</h1>
+            <nav>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i> Add Data</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Record Transportation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-table"></i> Chat Bot</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user"></i> Voice Journal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i> ClimateWise Score</a></li>
+                </ul>
+            </nav>
+            
+        </aside>
+        <main class="main-dashboard p-3">
+            <header class="d-flex justify-content-between align-items-center mb-4">
+                <h2 style="font-weight: bolder;">Main Dashboard</h2>
+                <h3 style="color: #2F1B25; font-size: medium;">By <span style="color:#FF6961 ;">2050</span>, a further <span style="color:#FF6961 ;">24 million children</span> are projected to be undernourished as a result of the climate crisis.
+                </h3>
+                    
+                <div class="profile bg-success text-white rounded-circle p-2">
+                    <i class="fas fa-user"></i>
+                </div>
+            </header>
+            <section class="dashboard-content">
+                <div class="section mb-4">
+                    <h3><i class="fas fa-dollar-sign"></i> Net Carbon Foot print</h3>
+                    <p style="color: #FF6961;">- 350.4 kg</p>
+                    <h4 style="color: #A15E49;">14 trees of average size needs to work for one year to offset this emmision </h4>
+
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-coins"></i> Carbon emmision this month</h3>
+                    <p>-42.39 kg</p>
+                    <h4 style="color: #5ea63c;"> Made the planet cooler by 10^-07 degree celcius  </h4>
+
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-chart-line"></i> Impact due to changing life style </h3>
+                    <p>-21.34 kg</p>
+                    <h4 style="color: #5ea63c;"> might be 21.34 kg today but progressively its impact could save a life down the line  </h4>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-wallet"></i> Impact due to activities</h3>
+                    <p>-32.4 kg </p>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-tasks"></i> Pending Tasks</h3>
+                    <p>recycle trash</p>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-clipboard-list"></i> Total ClimateWise Score</h3>
+                    <p>2935</p>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-chart-area"></i> Monthly report</h3>
+                    <div class="chart">
+                        <canvas id="weeklyRevenueChart"></canvas>
+                    </div>
+                    <h3><i class="fas fa-chart-bar"></i> Daily Emissions</h3>
+                    <div class="chart">
+                        <canvas id="dailyEmissionsChart"></canvas>
+                    </div>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-leaf"></i> Carbon Footprint Data</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Impact</th>
+                                <th>Quantity</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"> Transportation</td>
+                                <td>25.5%</td>
+                                <td>1258 kg CO2</td>
+                                <td>12 Jan 2023</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" checked> Energy Consumption</td>
+                                <td>30.8%</td>
+                                <td>1485 kg CO2</td>
+                                <td>21 Feb 2023</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" checked> Waste Management</td>
+                                <td>15.3%</td>
+                                <td>1024 kg CO2</td>
+                                <td>13 Mar 2023</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" checked> Industrial Processes</td>
+                                <td>10.5%</td>
+                                <td>858 kg CO2</td>
+                                <td>24 Jan 2023</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"> Agriculture</td>
+                                <td>18.2%</td>
+                                <td>258 kg CO2</td>
+                                <td>24 Oct 2022</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                
+                
+                <div class="section mb-4">
+                    <h3><i class="fas fa-tasks"></i> Tasks</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item"><input type="checkbox"> Implement Renewable Energy</li>
+                        <li class="list-group-item"><input type="checkbox" checked> Reduce Waste</li>
+                        <li class="list-group-item"><input type="checkbox" checked> Improve Transportation</li>
+                        <li class="list-group-item"><input type="checkbox"> Optimize Industrial Processes</li>
+                        <li class="list-group-item"><input type="checkbox" checked> Increase Recycling</li>
+                    </ul>
+                </div>
+                
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
