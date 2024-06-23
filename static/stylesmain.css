@@ -36,7 +36,7 @@ h1 {
 
 .sidebar {
     width: 250px;
-    height: 2500px;
+    height: 1200px;
     padding: 20px;
     background-color: var(--side-color);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
