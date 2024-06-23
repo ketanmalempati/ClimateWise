@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Carbon Impact Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <aside class="sidebar">
+            <h1>Climate Wise</h1>
+            <nav>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i> Main Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Carbon Data</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-table"></i> Data Tables</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user"></i> Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+                </ul>
+            </nav>
+            
+        </aside>
+        <main class="main-dashboard p-3">
+            <header class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Main Dashboard</h2>
+                <div class="input-group search">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                </div>
+                <div class="profile bg-success text-white rounded-circle p-2">
+                    <i class="fas fa-user"></i>
+                </div>
+            </header>
+            <section class="dashboard-content">
+                <div class="section mb-4">
+                    <h3><i class="fas fa-dollar-sign"></i> Net Carbon Foot print</h3>
+                    <p style="color: #FF6961;">- 350.4 kg</p>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-coins"></i> Carbon emmision this month</h3>
+                    <p>$642.39</p>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-chart-line"></i> Sales</h3>
+                    <p>$574.34</p>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-wallet"></i> Your balance</h3>
+                    <p>$1,000</p>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-tasks"></i> New Tasks</h3>
+                    <p>154</p>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-clipboard-list"></i> Total Projects</h3>
+                    <p>2935</p>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-chart-area"></i> Weekly Revenue</h3>
+                    <div class="chart">
+                        <canvas id="weeklyRevenueChart"></canvas>
+                    </div>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-leaf"></i> Carbon Footprint Data</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Impact</th>
+                                <th>Quantity</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"> Transportation</td>
+                                <td>25.5%</td>
+                                <td>1258 kg CO2</td>
+                                <td>12 Jan 2023</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" checked> Energy Consumption</td>
+                                <td>30.8%</td>
+                                <td>1485 kg CO2</td>
+                                <td>21 Feb 2023</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" checked> Waste Management</td>
+                                <td>15.3%</td>
+                                <td>1024 kg CO2</td>
+                                <td>13 Mar 2023</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" checked> Industrial Processes</td>
+                                <td>10.5%</td>
+                                <td>858 kg CO2</td>
+                                <td>24 Jan 2023</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"> Agriculture</td>
+                                <td>18.2%</td>
+                                <td>258 kg CO2</td>
+                                <td>24 Oct 2022</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-chart-bar"></i> Daily Emissions</h3>
+                    <div class="chart">
+                        <canvas id="dailyEmissionsChart"></canvas>
+                    </div>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-chart-pie"></i> Emissions Breakdown</h3>
+                    <div class="chart">
+                        <canvas id="emissionsPieChart"></canvas>
+                    </div>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-list"></i> Detailed Data</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Progress</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Transportation</td>
+                                <td><span class="badge bg-success"><i class="fas fa-check"></i> Approved</span></td>
+                                <td>18 Apr 2022</td>
+                                <td><div class="progress"><div class="progress-bar" style="width: 70%;"></div></div></td>
+                            </tr>
+                            <tr>
+                                <td>Energy Consumption</td>
+                                <td><span class="badge bg-danger"><i class="fas fa-times"></i> Disabled</span></td>
+                                <td>18 Apr 2022</td>
+                                <td><div class="progress"><div class="progress-bar" style="width: 30%;"></div></div></td>
+                            </tr>
+                            <tr>
+                                <td>Waste Management</td>
+                                <td><span class="badge bg-warning"><i class="fas fa-exclamation-triangle"></i> Error</span></td>
+                                <td>20 May 2021</td>
+                                <td><div class="progress"><div class="progress-bar" style="width: 40%;"></div></div></td>
+                            </tr>
+                            <tr>
+                                <td>Industrial Processes</td>
+                                <td><span class="badge bg-success"><i class="fas fa-check"></i> Approved</span></td>
+                                <td>12 Jul 2021</td>
+                                <td><div class="progress"><div class="progress-bar" style="width: 50%;"></div></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-tasks"></i> Tasks</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item"><input type="checkbox"> Implement Renewable Energy</li>
+                        <li class="list-group-item"><input type="checkbox" checked> Reduce Waste</li>
+                        <li class="list-group-item"><input type="checkbox" checked> Improve Transportation</li>
+                        <li class="list-group-item"><input type="checkbox"> Optimize Industrial Processes</li>
+                        <li class="list-group-item"><input type="checkbox" checked> Increase Recycling</li>
+                    </ul>
+                </div>
+                <div class="section mb-4">
+                    <h3><i class="fas fa-calendar-alt"></i> Calendar</h3>
+                    <div class="calendar">
+                        <div class="month d-flex justify-content-between align-items-center mb-2">
+                            <button class="btn btn-link prev"><i class="fas fa-chevron-left"></i></button>
+                            <span>June 2024</span>
+                            <button class="btn btn-link next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="days d-flex flex-wrap">
+                            <div class="day">M</div>
+                            <div class="day">T</div>
+                            <div class="day">W</div>
+                            <div class="day">T</div>
+                            <div class="day">F</div>
+                            <div class="day">S</div>
+                            <div class="day">S</div>
+                            <div class="date">27</div>
+                            <div class="date">28</div>
+                            <div class="date">29</div>
+                            <div class="date">30</div>
+                            <div class="date">31</div>
+                            <div class="date">1</div>
+                            <div class="date">2</div>
+                            <div class="date">3</div>
+                            <div class="date">4</div>
+                            <div class="date">5</div>
+                            <div class="date">6</div>
+                            <div class="date">7</div>
+                            <div class="date">8</div>
+                            <div class="date">9</div>
+                            <div class="date">10</div>
+                            <div class="date">11</div>
+                            <div class="date">12</div>
+                            <div class="date">13</div>
+                            <div class="date">14</div>
+                            <div class="date">15</div>
+                            <div class="date">16</div>
+                            <div class="date">17</div>
+                            <div class="date">18</div>
+                            <div class="date">19</div>
+                            <div class="date">20</div>
+                            <div class="date">21</div>
+                            <div class="date">22</div>
+                            <div class="date today">23</div>
+                            <div class="date">24</div>
+                            <div class="date">25</div>
+                            <div class="date">26</div>
+                            <div class="date">27</div>
+                            <div class="date">28</div>
+                            <div class="date">29</div>
+                            <div class="date">30</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
