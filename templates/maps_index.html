@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Data Processor</title>
+    <link rel="stylesheet" href=maps.css>
+</head>
+<body>
+    <div class="container">
+        <h1>Map Data Input</h1>
+        <table id="dataInput">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Mode of Transport</th>
+                    <th>Time</th>
+                    <th>Distance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be added here -->
+            </tbody>
+        </table>
+        <button onclick="addRow()">Add Row</button>
+        <button onclick="submitData()">Submit Data</button>
+        <h2>Results</h2>
+        <pre id="results"></pre>
+    </div>
+    <script src=maps.js></script>
+</body>
+</html>
