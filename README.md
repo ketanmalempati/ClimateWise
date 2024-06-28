@@ -8,6 +8,8 @@ The app provides users with an overview of their carbon footprint based on their
 
 # Key features include:
 
+**Youtube Link**: https://youtu.be/cifZWxIGiAY
+
 **Home Page**: Displaying a summary of the user's overall carbon footprint, along with actionable advice on reducing it.
 
 ![image](https://github.com/ketanmalempati/ClimateWise/assets/57043103/afafdec6-bebe-42da-b2c6-e43d63046e58)
@@ -53,4 +55,3 @@ Financial Integration: Connect with banking apps to analyze spending patterns an
 Community Challenges: Introduce features that allow users to participate in challenges with friends or colleagues, fostering a competitive spirit to achieve the lowest carbon footprint.
 Our goal is to continually evolve the app to include more features that will not only help individuals reduce their carbon footprint but also engage communities in collective environmental responsibility.
 
-https://youtu.be/cifZWxIGiAY
