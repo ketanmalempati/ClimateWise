@@ -36,13 +36,20 @@ Users can review detailed reports and insights to identify high-emission areas a
 We utilized a blend of modern web technologies and advanced AI services:
 
 Frontend: Developed using HTML, CSS, and JavaScript to ensure a responsive and user-friendly interface.
+
 Backend: Implemented with Flask, which facilitates communication between the frontend and various AI models hosted on Hugging Face and other platforms.
+
 AI Integration: We integrated Amazon Bedrock for inference with LLMs like Anthropic Claude 3, OpenAI's Whisper for speech-to-text capabilities, and Moondream2 for image-to-text conversions.
+
 Data Storage: Utilized AWS S3 buckets for robust and scalable storage of images, audio files, and textual data.
-Challenges we ran into
-One significant challenge was the integration of the Whisper model for transcription, primarily due to compatibility issues with different versions of OpenAI's API. This required extensive testing and modifications to ensure stable functionality.
-Building the front end was a little complex since we mainly focused on backend and machine learning models for projects.
-Accomplishments that we're proud of
+
+# Challenges we ran into
+
+- One significant challenge was the integration of the Whisper model for transcription, primarily due to compatibility issues with different versions of OpenAI's API. This required extensive testing and modifications to ensure stable functionality.
+- Building the front end was a little complex since we mainly focused on backend and machine learning models for projects.
+
+# Accomplishments that we're proud of
+
 We are particularly proud of developing a tool that can significantly impact individuals' ecological footprints. By providing easy-to-understand data and actionable insights, we empower users to make informed decisions that contribute to global sustainability.
 
 # What we learned
@@ -50,8 +57,9 @@ This project enhanced our skills in collaborative problem-solving and integratin
 
 # What's next for the project?
 Looking ahead, we plan to:
-Expand Device Integration: Enable syncing with smartphones and wearable devices to track fitness and travel data automatically.
-Financial Integration: Connect with banking apps to analyze spending patterns and suggest more eco-friendly purchasing options.
-Community Challenges: Introduce features that allow users to participate in challenges with friends or colleagues, fostering a competitive spirit to achieve the lowest carbon footprint.
+- Expand Device Integration: Enable syncing with smartphones and wearable devices to track fitness and travel data automatically.
+- Financial Integration: Connect with banking apps to analyze spending patterns and suggest more eco-friendly purchasing options.
+- Community Challenges: Introduce features that allow users to participate in challenges with friends or colleagues, fostering a competitive spirit to achieve the lowest carbon footprint.
+
 Our goal is to continually evolve the app to include more features that will not only help individuals reduce their carbon footprint but also engage communities in collective environmental responsibility.
 
